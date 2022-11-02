@@ -439,7 +439,22 @@
               </li>
             </ul>
           </div>
+          <div class="footer-container-input">
+            <form class="footer-form">
+              <div class="footer-follow">
+             <label class="footer-label" for="footer-input">Підпишіться на розсилку</label>
+             <input class="footer-input" type="email" name="email" id="footer-email" placeholder="E-mail">
+             </div>
+             <button type="submit" class="footer-submit">Підписатися</button>
+         
+             </form>
+          </div>
       </div>
+
+ 
+      
+      
+
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -481,11 +496,16 @@
           </div>
           
 
-          <div class="modal-field">
+          <div class="modal-field comment">
             <label for="comment" class="form-label">Коментар</label>
               <textarea class="modal-comment"  name="comment" id="comment" placeholder="Введіть текст"></textarea>
           </div>
 
+          <label class="label-checkbox" for="checkbox">
+            <input type="checkbox" class="input-checkbox" id="checkbox" value="policy">
+            <span class="checkbox-icon"></span>
+            Погоджуюся з розсилкою та приймаю <a href="" class="checkbox-link">Умови договору</a>
+          </label>
           <button type="submit" class="modal-submit-button"><p class="modal-submit-button-text">Відправити</p></button>
 
         </form>
