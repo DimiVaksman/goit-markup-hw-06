@@ -881,14 +881,16 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%) scale(1);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 width: 528px;
-min-height: 581px;
+height: 581px;
 
 background: var(--white-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
+
+padding: 40px;
 }
 
 
@@ -939,12 +941,9 @@ justify-content: center;
 /* ----------------------------FORM!!!!!!!!!!!!!!!!! */
 
 .form-modal{
-  padding-left: 41px;
-  padding-right: 39px;
 }
 
 .form-tittle{
-  padding-top: 40px;
   margin-bottom: 12px;
   font-family: var(--primary-font);
   font-weight: 700;
@@ -1052,14 +1051,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 margin-top: 30px;
 transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-submit-button:hover ,
-.modal-submit-button:focus{
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.modal-submit-button-text{
 font-family:var(--primary-font);
 font-weight: 700;
 font-size: 16px;
@@ -1068,6 +1060,13 @@ text-align: center;
 letter-spacing: 0.06em;
 color: #FFFFFF;
 }
+
+.modal-submit-button:hover ,
+.modal-submit-button:focus{
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
 
 
 
@@ -1102,7 +1101,7 @@ color: #FFFFFF;
 
 .label-checkbox{
 display: flex;
-align-items: center;
+justify-content: center;
 font-family: var(--primary-font);
 font-size: 14px;
 line-height: 1.71;
@@ -1113,7 +1112,6 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 
 .checkbox-icon{
-  content: '';
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -1136,13 +1134,9 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 
 .footer-form {
+  display: flex;
 }
-.footer-follow {
-  position: relative;
-
-}
-.footer-label {
-  display: block;
+.footer-button-text {
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 14px;
@@ -1152,8 +1146,10 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   color: var(--white-color);
   margin-bottom: 20px;
 }
+
 .footer-input {
 padding-left: 16px;
+margin-right: 12px;
 width: 358px;
 height: 50px;
 font-family:var(--primary-font);
@@ -1168,13 +1164,11 @@ border-radius: 4px;
 background-color: rgba(47, 48, 58, 1);
 }
 .footer-submit {
-position: absolute;
-bottom: 0;
-left: calc(100% + 10px);
+position: relative;
 
 display: flex;
 align-items: center;
-justify-content: center;
+padding-left: 28px;
 
 width: 200px;
 height: 50px;
@@ -1200,5 +1194,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , box-shadow 250
 
 
 .footer-button-icon{
-  margin-left: 10px;
+ position: absolute;
+ right: 30px;
 }
